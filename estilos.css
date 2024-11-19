@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Helvetica;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+    margin: auto;
+    max-width: 1200px;
+    background-color: #f0f3f8;
+}
+
+.menu {
+    list-style: none;
+  }
+
+h1{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+h3{
+    font-size: 12px;
+    color: #03adf9;
+}
+
+nav{
+    margin-bottom: 40px;
+}
+
+a{
+    text-decoration: none;
+    /* border: 1px red solid; */
+    padding: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+a:hover{
+    color: white;
+    background-color: #0973d7;
+    border-radius: 7px;
+    border: 0px #0973d7 solid;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 30px;
+    
+}
+
+.parent img{
+    border: 1px white solid;
+    border-radius: 7px;
+}
+    
+.fila1_1 {
+    grid-row: span 2 / span 2;
+    /* border: 1px red solid; */
+}
+
+.fila1_2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    /* border: 1px red solid; */
+}
+
+.fila2_1 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    /* border: 1px red solid; */
+}
+
+.fila2_2 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 3;
+    /* border: 1px red solid; */
+}
+
+.fila2_3 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    /* border: 1px red solid; */
+}
+
+.img1{
+    position: relative; /* Posición relativa para el contenedor de la imagen */
+    
+}
+.img1 img{
+    /* width: 100%; */
+    transition: transform 0.3s; 
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #38afffdb; /* Fondo oscuro semitransparente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Comienza oculto */
+    transition: opacity 0.3s; /* Transición suave para la opacidad */
+    border-radius: 7px;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.overlay h2, p{
+    margin-top: 20px;
+}
+
+.img1:hover .overlay {
+    opacity: 1;
+}
+
+.messenger {
+    font-size: 80px;
+    color: white;
+}
+
+.right {
+    margin-top: 30px;
+    font-size: 40px;
+    color: white;
+}
+
+.conterbtn{
+    border: 1px red solid;
+    text-align: center;
+}
+
+.btn{
+    padding: 17px 35px;
+    background-image: linear-gradient(to right, #0088ff, #33b8ff);
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+    transition: .5s;
+    margin-top: 46px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    border-radius: 5px;
+}
